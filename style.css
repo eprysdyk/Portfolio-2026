@@ -13,11 +13,11 @@ body {
 }
 
 .hero {
-    min-height: 100vh;
+    min-height: 420px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 24px;
+    padding: 80px 24px;
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
