@@ -6,12 +6,38 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #e8e8e8;
-    min-height: 100vh;
     background: #0f0f0f;
+    min-height: 100vh;
 }
 
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+}
+
+.nav-name {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: #e8e8e8;
+}
+
+.nav-links a {
+    margin-left: 24px;
+    font-size: 0.95rem;
+}
+
+/* Hero / banner */
 .hero {
     min-height: 420px;
     display: flex;
@@ -37,15 +63,15 @@ body {
     z-index: 1;
     display: flex;
     align-items: center;
-    gap: 48px;
+    gap: 40px;
     max-width: 860px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .profile-photo {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid rgba(255, 255, 255, 0.15);
@@ -53,21 +79,37 @@ body {
 }
 
 .hero-text {
-    max-width: 460px;
+    text-align: left;
 }
 
 h1 {
     font-size: 2.6rem;
-    margin-bottom: 16px;
     letter-spacing: -0.02em;
+    margin-bottom: 6px;
 }
 
-p {
+h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #8ab4f8;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Intro text */
+main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+}
+
+.intro p {
     color: #b8b8b8;
-    font-size: 1.05rem;
-    margin-bottom: 16px;
+    font-size: 1.08rem;
+    margin-bottom: 22px;
 }
 
+/* Links */
 a {
     color: #6ea8fe;
     text-decoration: none;
@@ -77,17 +119,41 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Footer */
+footer {
+    text-align: center;
+    padding: 32px 24px;
+    color: #666;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Mobile */
 @media (max-width: 640px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 20px;
+    }
+    .nav-links a {
+        margin: 0 10px;
+    }
+    .hero {
+        padding: 60px 20px;
+    }
     .hero-content {
         flex-direction: column;
         text-align: center;
-        gap: 32px;
+        gap: 28px;
+    }
+    .hero-text {
+        text-align: center;
     }
     h1 {
         font-size: 2rem;
     }
     .profile-photo {
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
     }
 }
