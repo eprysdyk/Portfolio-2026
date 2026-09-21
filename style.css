@@ -10,13 +10,14 @@ body {
     color: #e8e8e8;
     background: linear-gradient(
         135deg,
-        #2a2f35 0%,
-        #14181c 35%,
-        #0a0c0e 55%,
-        #1a2025 80%,
-        #2a2f35 100%
+        #2f3640 0%,
+        #1a1f24 30%,
+        #0d1013 55%,
+        #1a1f24 75%,
+        #2f3640 100%
     );
     background-attachment: fixed;
+    background-size: 100% 100%;
     min-height: 100vh;
 }
 
