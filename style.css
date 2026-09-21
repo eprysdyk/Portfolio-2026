@@ -184,3 +184,73 @@ footer {
         height: 150px;
     }
 }
+
+/* Work page */
+.intro {
+    max-width: 700px;
+    margin-bottom: 2.5rem;
+    color: #b8b8b8;
+}
+
+.project {
+    margin-bottom: 4rem;
+}
+
+.project h2 {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-meta {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    color: #b8b8b8;
+}
+
+.project-meta strong {
+    color: #e8e8e8;
+}
+
+/* Gallery grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery figure {
+    margin: 0;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.gallery figure:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.gallery figcaption {
+    padding: 1rem 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #b8b8b8;
+}
+
+.gallery figcaption strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+    color: #e8e8e8;
+}
