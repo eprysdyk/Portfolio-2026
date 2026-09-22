@@ -284,6 +284,17 @@ footer {
     color: #e8e8e8;
 }
 
+/* Featured gallery items — span 2 columns */
+.gallery figure.featured {
+    grid-column: span 2;
+}
+
+@media (max-width: 900px) {
+    .gallery figure.featured {
+        grid-column: span 1;
+    }
+}
+
 /* Lightbox */
 .lightbox {
     display: none;
