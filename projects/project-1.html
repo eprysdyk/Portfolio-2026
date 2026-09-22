@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1 — Eric Rysdyk</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
 
+    <nav>
+        <a href="../index.html" class="nav-name">Eric Rysdyk</a>
+        <div class="nav-links">
+            <a href="../work.html">Work</a>
+            <a href="../resume.html">Resume</a>
+            <a href="mailto:eprysdyk@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <p class="breadcrumb"><a href="../work.html">← Back to Work</a></p>
+
+        <h1>Project 1 — Mixed-Use Multi Family Development</h1>
+        <p class="project-meta"><strong>Project Type:</strong> Parkade, Commercial Retail, Daycare, Residential Apartments</p>
+        <p class="project-meta"><strong>My Role:</strong> Architectural Technologist (Junior)</p>
+        <p>Prepared drawing sets for structural, electrical, mechanical, and landscape consultant review. Coordinated documentation packages for permitting and construction.</p>
+
+        <div class="gallery">
+
+            <!-- Overall & Enlarged Layouts -->
+            <figure class="featured">
+                <img src="../images/01_overall_parkade.jpg" alt="Overall parkade plan">
+                <figcaption>
+                    <strong>Overall Parkade Plan</strong><br>
+                    Parkade layout showing ramp, overhead door, and stall coordination.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/01_enlarged_parkade.jpg" alt="Enlarged parkade plan">
+                <figcaption>
+                    <strong>Enlarged Parkade Plan</strong><br>
+                    Zoomed-in detail showing structural slab and stair core coordination.
+                </figcaption>
+            </figure>
+
+            <figure class="featured">
+                <img src="../images/01_overall_apartments.jpg" alt="Overall apartment floor plan">
+                <figcaption>
+                    <strong>Overall Apartment Plan</strong><br>
+                    Residential level layout showing suite arrangement and corridor coordination.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/01_enlarged_suites.jpg" alt="Enlarged suite plans">
+                <figcaption>
+                    <strong>Enlarged Suite Plans</strong><br>
+                    Detailed suite layouts showing unit mix and adjacent suite coordination.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/01_enlarged_daycare.jpg" alt="Enlarged daycare plan">
+                <figcaption>
+                    <strong>Enlarged Daycare Plan</strong><br>
+                    Daycare layout showing toddler room, pre-school, and washroom coordination.
+                </figcaption>
+            </figure>
+
+            <!-- Cross Sections -->
+            <figure class="featured">
+                <img src="../images/01_building_cross_section.jpg" alt="Building cross section">
+                <figcaption>
+                    <strong>Building Cross Section</strong><br>
+                    Detail showing balcony construction, roof line, and level elevations.
+                </figcaption>
+            </figure>
+
+            <figure class="orphan-right">
+                <img src="../images/01_building_cross_section_dim.jpg" alt="Dimensioned building cross section">
+                <figcaption>
+                    <strong>Dimensioned Building Cross Section</strong><br>
+                    Dimensioned view showing level heights and structural coordination.
+                </figcaption>
+            </figure>
+
+            <figure class="featured">
+                <img src="../images/01_stair_cross_section.jpg" alt="Stair cross section">
+                <figcaption>
+                    <strong>Stair Cross Section</strong><br>
+                    Stair detailing showing risers, landings, and head height clearance.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/01_elevator_cross_section.jpg" alt="Elevator cross section">
+                <figcaption>
+                    <strong>Elevator Cross Section</strong><br>
+                    Vertical circulation detail showing elevator shaft and lobby coordination.
+                </figcaption>
+            </figure>
+
+            <!-- Suite Plans & Schedules -->
+            <figure class="featured">
+                <img src="../images/01_suite_layout.jpg" alt="Suite layout detail">
+                <figcaption>
+                    <strong>Suite Layout Detail</strong><br>
+                    Detailed unit plan showing kitchen, laundry, ensuite, and living area.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/01_suite_layout_schedule.jpg" alt="Suite layout schedule">
+                <figcaption>
+                    <strong>Suite Layout Schedule</strong><br>
+                    Elements schedule showing millwork, fixtures, and kitchen components.
+                </figcaption>
+            </figure>
+
+            <!-- RCPs & Schedules -->
+            <figure class="featured">
+                <img src="../images/01_overall_main_rcp.jpg" alt="Overall main level RCP">
+                <figcaption>
+                    <strong>Overall Main Level RCP</strong><br>
+                    Reflected ceiling plan showing finish zones and height coordination.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/01_overall_rcp_schedule.jpg" alt="Overall RCP schedule">
+                <figcaption>
+                    <strong>Overall RCP Schedule</strong><br>
+                    Ceiling legend showing finish types and suspension systems.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/01_suite_rcp.jpg" alt="Suite reflected ceiling plan">
+                <figcaption>
+                    <strong>Suite RCP</strong><br>
+                    In-suite ceiling layout showing heights, bulkheads, and finishes.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/01_suite_rcp_schedule.jpg" alt="Suite RCP schedule">
+                <figcaption>
+                    <strong>Suite RCP Schedule</strong><br>
+                    Ceiling schedule showing suite finish types and height tags.
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eric Rysdyk</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
