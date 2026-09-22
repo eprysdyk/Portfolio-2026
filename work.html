@@ -31,7 +31,8 @@
 
             <div class="gallery">
 
-                <figure>
+                <!-- FEATURED: Building Cross Section -->
+                <figure class="featured">
                     <img src="images/01_building_cross_section.jpg" alt="Building cross section">
                     <figcaption>
                         <strong>Building Cross Section</strong><br>
@@ -63,7 +64,8 @@
                     </figcaption>
                 </figure>
 
-                <figure>
+                <!-- FEATURED: Overall Parkade Plan -->
+                <figure class="featured">
                     <img src="images/01_overall_parkade.jpg" alt="Overall parkade plan">
                     <figcaption>
                         <strong>Overall Parkade Plan</strong><br>
@@ -79,7 +81,8 @@
                     </figcaption>
                 </figure>
 
-                <figure>
+                <!-- FEATURED: Overall Apartment Plan -->
+                <figure class="featured">
                     <img src="images/01_overall_apartments.jpg" alt="Overall apartment floor plan">
                     <figcaption>
                         <strong>Overall Apartment Plan</strong><br>
@@ -95,7 +98,8 @@
                     </figcaption>
                 </figure>
 
-                <figure>
+                <!-- FEATURED: Suite Layout Detail -->
+                <figure class="featured">
                     <img src="images/01_suite_layout.jpg" alt="Suite layout detail">
                     <figcaption>
                         <strong>Suite Layout Detail</strong><br>
@@ -160,43 +164,40 @@
         <p>&copy; 2026 Eric Rysdyk</p>
     </footer>
 
-   <!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
-    <img src="" alt="" id="lightbox-img">
-</div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <img src="" alt="" id="lightbox-img">
+    </div>
 
-<script>
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const closeBtn = document.getElementById('lightbox-close');
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.getElementById('lightbox-close');
 
-    // Open lightbox when a gallery image is clicked
-    document.querySelectorAll('.gallery img').forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('active');
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
         });
-    });
 
-    // Close on click of the X button
-    closeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        lightbox.classList.remove('active');
-    });
-
-    // Close on click anywhere in the overlay
-    lightbox.addEventListener('click', () => {
-        lightbox.classList.remove('active');
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
             lightbox.classList.remove('active');
-        }
-    });
-</script> 
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+
 </body>
 </html>
