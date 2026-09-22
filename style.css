@@ -287,6 +287,21 @@ footer {
     color: #e8e8e8;
 }
 
+/* Orphan card positioning */
+.gallery figure.orphan-left {
+    grid-column: 1 / -1;
+    max-width: 420px;
+    justify-self: start;
+    margin-right: auto;
+}
+
+.gallery figure.orphan-right {
+    grid-column: 1 / -1;
+    max-width: 420px;
+    justify-self: end;
+    margin-left: auto;
+}
+
 /* Featured gallery items — full row width */
 .gallery figure.featured {
     grid-column: 1 / -1;
