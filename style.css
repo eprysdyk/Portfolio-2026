@@ -284,14 +284,18 @@ footer {
     color: #e8e8e8;
 }
 
-/* Featured gallery items — span 2 columns */
+/* Featured gallery items — full row width */
 .gallery figure.featured {
-    grid-column: span 2;
+    grid-column: 1 / -1;
+}
+
+.gallery figure.featured img {
+    height: 500px;
 }
 
 @media (max-width: 900px) {
-    .gallery figure.featured {
-        grid-column: span 1;
+    .gallery figure.featured img {
+        height: 300px;
     }
 }
 
