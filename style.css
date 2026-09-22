@@ -10,11 +10,11 @@ body {
     color: #e8e8e8;
     background: linear-gradient(
         135deg,
-        #262b31 0%,
-        #15191d 35%,
-        #0a0c0e 55%,
-        #15191d 75%,
-        #262b31 100%
+        #24302f 0%,
+        #131a1c 35%,
+        #0a0d0f 55%,
+        #131a1c 75%,
+        #24302f 100%
     );
     background-attachment: fixed;
     background-size: 100% 100%;
