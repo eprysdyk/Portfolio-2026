@@ -399,3 +399,90 @@ footer {
     background: rgba(77, 182, 172, 0.15);
     color: #4db6ac;
 }
+
+/* Breadcrumb */
+.breadcrumb {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+/* Work landing — project cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+    justify-items: center;
+}
+
+.project-card {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 3px solid rgba(77, 182, 172, 0.5);
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.25s ease, transform 0.25s ease, border-top-color 0.25s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    transform: translateY(-4px);
+    border-top-color: #4db6ac;
+    text-decoration: none;
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #181818;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-card-content {
+    padding: 1.4rem 1.5rem 1.6rem;
+}
+
+.project-card h2 {
+    font-size: 1.15rem;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    border: none;
+    padding: 0;
+    color: #e8e8e8;
+}
+
+.project-card p {
+    font-size: 0.92rem;
+    color: #b8b8b8;
+    margin-bottom: 1rem;
+    line-height: 1.55;
+}
+
+.project-card-link {
+    color: #4db6ac;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.project-card-placeholder {
+    opacity: 0.5;
+    pointer-events: none;
+    border-top-color: rgba(77, 182, 172, 0.15);
+}
+
+.project-card-placeholder .project-card-content {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.project-card-placeholder .project-card-link {
+    color: #666;
+}
