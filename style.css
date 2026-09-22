@@ -237,10 +237,13 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin-top: 2.5rem;
+    justify-items: center;
 }
 
 .gallery figure {
     margin: 0;
+    width: 100%;
+    max-width: 420px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-top: 3px solid rgba(77, 182, 172, 0.5);
@@ -287,15 +290,26 @@ footer {
 /* Featured gallery items — full row width */
 .gallery figure.featured {
     grid-column: 1 / -1;
+    max-width: 100%;
 }
 
 .gallery figure.featured img {
     height: 500px;
 }
 
+/* Center orphan cards that end up alone in a row */
+.gallery figure:last-child:nth-child(odd):not(.featured) {
+    grid-column: span 2;
+    max-width: 420px;
+    justify-self: center;
+}
+
 @media (max-width: 900px) {
     .gallery figure.featured img {
         height: 300px;
+    }
+    .gallery figure:last-child:nth-child(odd):not(.featured) {
+        grid-column: 1 / -1;
     }
 }
 
