@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2 — Eric Rysdyk</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
 
+    <nav>
+        <a href="../index.html" class="nav-name">Eric Rysdyk</a>
+        <div class="nav-links">
+            <a href="../work.html">Work</a>
+            <a href="../resume.html">Resume</a>
+            <a href="mailto:eprysdyk@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <p class="breadcrumb"><a href="../work.html">← Back to Work</a></p>
+
+        <h1>Project 2 — Detail Studies</h1>
+        <p class="project-meta"><strong>Project Type:</strong> Multi-Family Residential (Detail Focus)</p>
+        <p class="project-meta"><strong>My Role:</strong> Architectural Technologist (Junior)</p>
+        <p>Focused detail drawings prepared for consultant coordination and permitting. These studies highlight construction assemblies, wall schedules, vertical circulation, and in-suite coordination.</p>
+
+        <div class="gallery">
+
+            <figure class="featured">
+                <img src="../images/02_building_section_elevations.jpg" alt="Building section with elevations">
+                <figcaption>
+                    <strong>Building Section with Level Elevations</strong><br>
+                    Full building section showing roof, level, and parkade elevations with key plan.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/02_elevator_cross_section.jpg" alt="Elevator cross section">
+                <figcaption>
+                    <strong>Elevator Cross Section</strong><br>
+                    Elevator shaft section showing machine room, pit, and lobby coordination.
+                </figcaption>
+            </figure>
+
+            <figure class="featured">
+                <img src="../images/02_stair_cross_section.jpg" alt="Stair cross section">
+                <figcaption>
+                    <strong>Stair Cross Section</strong><br>
+                    Stair section showing riser heights, runs, handrails, and code compliance.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/02_stair_layout.jpg" alt="Stair layout">
+                <figcaption>
+                    <strong>Stair Layout Detail</strong><br>
+                    Fourth floor stair layout showing dimensions and mechanical shaft.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/02_parkade_ramp_detail.jpg" alt="Parkade ramp detail">
+                <figcaption>
+                    <strong>Parkade Ramp Detail</strong><br>
+                    Heated ramp and overhead door coordination with structural grid.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/02_parkade_wall_schedule.jpg" alt="Parkade wall schedule">
+                <figcaption>
+                    <strong>Parkade Wall Schedule</strong><br>
+                    Exterior and interior wall assemblies with fire ratings and insulation.
+                </figcaption>
+            </figure>
+
+            <figure class="featured">
+                <img src="../images/02_floor_plans_comparison.jpg" alt="Floor plans comparison">
+                <figcaption>
+                    <strong>Floor Plans Comparison</strong><br>
+                    Main, typical, and fourth floor plans showing suite variation and layout.
+                </figcaption>
+            </figure>
+
+            <figure class="featured">
+                <img src="../images/02_suite_layout_details.jpg" alt="Suite layout details">
+                <figcaption>
+                    <strong>Suite Layout Detail</strong><br>
+                    Enlarged suite showing bathroom, kitchen, and stair coordination.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/02_suite_layout_schedule.jpg" alt="Suite layout schedule">
+                <figcaption>
+                    <strong>Suite Layout Schedule</strong><br>
+                    Enlarged suite with dimensioned elements and drawing title block.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/02_suite_rcp_detail.jpg" alt="Suite RCP detail">
+                <figcaption>
+                    <strong>Suite RCP Detail</strong><br>
+                    Suite ceiling plan showing bulkheads and finish zones.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/02_suite_rcp_schedule.jpg" alt="Suite RCP schedule">
+                <figcaption>
+                    <strong>Suite RCP Schedule</strong><br>
+                    Ceiling legend with heights and finish types for suite coordination.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/02_wall_schedule_notes.jpg" alt="Wall schedule notes">
+                <figcaption>
+                    <strong>Wall Schedule Notes</strong><br>
+                    Firewall assemblies, ratings, and general notes for wall construction.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/02_vestibule_unisex_washroom.jpg" alt="Vestibule and unisex washroom">
+                <figcaption>
+                    <strong>Vestibule & Unisex Washroom</strong><br>
+                    Accessible washroom layout with vestibule and activated door coordination.
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eric Rysdyk</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
