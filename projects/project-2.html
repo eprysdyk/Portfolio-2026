@@ -1,39 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 2 — Eric Rysdyk</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-
-    <nav>
-        <a href="../index.html" class="nav-name">Eric Rysdyk</a>
-        <div class="nav-links">
-            <a href="../work.html">Work</a>
-            <a href="../resume.html">Resume</a>
-            <a href="mailto:eprysdyk@gmail.com">Contact</a>
-        </div>
-    </nav>
-
-    <main>
-
-        <p class="breadcrumb"><a href="../work.html">← Back to Work</a></p>
-
-        <h1>Project 2 — Detail Studies</h1>
-        <p class="project-meta"><strong>Project Type:</strong> Multi-Family Residential (Detail Focus)</p>
-        <p class="project-meta"><strong>My Role:</strong> Architectural Technologist (Junior)</p>
-        <p class="project-meta"><strong>Program:</strong> AutoCAD</p>
-        <p>Focused detail drawings prepared for consultant coordination and permitting. These studies highlight construction assemblies, wall schedules, vertical circulation, and in-suite coordination.</p>
-
         <div class="gallery">
 
             <figure class="featured">
                 <img src="../images/02_building_section_elevations.jpg" alt="Building section with elevations">
                 <figcaption>
                     <strong>Building Section with Level Elevations</strong><br>
-                    Partial building section showing roof, level, and elevations with key plan.
+                    Partial building section showing roof, floor levels, and elevations with key plan.
                 </figcaption>
             </figure>
 
@@ -41,7 +12,7 @@
                 <img src="../images/02_elevator_cross_section.jpg" alt="Elevator cross section">
                 <figcaption>
                     <strong>Elevator Cross Section</strong><br>
-                    Elevator shaft section showing machine room, pit, lobby coordination and notes to refer to included consultant drawings.
+                    Elevator shaft section showing machine room, pit, and lobby coordination, with notes directing to included consultant drawings.
                 </figcaption>
             </figure>
 
@@ -57,7 +28,7 @@
                 <img src="../images/02_stair_layout.jpg" alt="Stair layout">
                 <figcaption>
                     <strong>Stair Layout Detail</strong><br>
-                    Floor stair layout showing dimensions and mechanical shaft, that would accompany the stair cross sections.
+                    Floor stair layout showing dimensions and mechanical shaft, accompanying the stair cross sections.
                 </figcaption>
             </figure>
 
@@ -73,23 +44,23 @@
                 <img src="../images/02_parkade_wall_schedule.jpg" alt="Parkade wall schedule">
                 <figcaption>
                     <strong>Parkade Wall Schedule</strong><br>
-                    Exterior and interior wall assemblies with fire ratings, insulation and updated building codes.
+                    Exterior and interior wall assemblies with fire ratings, insulation, and updated building codes.
                 </figcaption>
             </figure>
 
             <figure class="featured">
                 <img src="../images/02_floor_plans_comparison.jpg" alt="Floor plans comparison">
                 <figcaption>
-                    <strong>Floor Plans Layouts</strong><br>
-                    Main, typical, and fourth floor plans all fitting strategically to minimise the amount of separate drawings.
+                    <strong>Floor Plan Layouts</strong><br>
+                    Main, typical, and fourth floor plans arranged strategically on one sheet to minimize the number of separate drawings.
                 </figcaption>
             </figure>
 
             <figure class="featured">
                 <img src="../images/02_suite_layout_details.jpg" alt="Suite layout details">
                 <figcaption>
-                    <strong>Smallest Details</strong><br>
-                    Enlarged floor plans to show every detail for clear understanding.
+                    <strong>Enlarged Suite Layout</strong><br>
+                    Enlarged suite plans showing detailed construction information for clear coordination.
                 </figcaption>
             </figure>
 
@@ -113,7 +84,7 @@
                 <img src="../images/02_suite_rcp_schedule.jpg" alt="Suite RCP schedule">
                 <figcaption>
                     <strong>Overall RCP and Schedule</strong><br>
-                    Ceiling legend with heights and finish types.
+                    Ceiling legend showing ceiling heights, finish types, and fixture tags.
                 </figcaption>
             </figure>
 
@@ -121,7 +92,7 @@
                 <img src="../images/02_wall_schedule_notes.jpg" alt="Wall schedule notes">
                 <figcaption>
                     <strong>Wall Schedule Notes</strong><br>
-                    Firewall assemblies, ratings, and general notes for wall construction to follow local building codes.
+                    Firewall assemblies, ratings, and general notes for wall construction, following local building codes.
                 </figcaption>
             </figure>
 
@@ -129,52 +100,8 @@
                 <img src="../images/02_vestibule_unisex_washroom.jpg" alt="Vestibule and unisex washroom">
                 <figcaption>
                     <strong>Accessibility</strong><br>
-                    Accessible washroom layout with vestibule and activated door coordination to follow local building code.
+                    Accessible washroom layout with vestibule and activated door coordination, following local building code.
                 </figcaption>
             </figure>
 
         </div>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Eric Rysdyk</p>
-    </footer>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
-        <img src="" alt="" id="lightbox-img">
-    </div>
-
-    <script>
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const closeBtn = document.getElementById('lightbox-close');
-
-        document.querySelectorAll('.gallery img').forEach(img => {
-            img.addEventListener('click', () => {
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                lightbox.classList.add('active');
-            });
-        });
-
-        closeBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            lightbox.classList.remove('active');
-        });
-
-        lightbox.addEventListener('click', () => {
-            lightbox.classList.remove('active');
-        });
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                lightbox.classList.remove('active');
-            }
-        });
-    </script>
-
-</body>
-</html>
