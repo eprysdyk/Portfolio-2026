@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 — Eric Rysdyk</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
 
+    <nav>
+        <a href="../index.html" class="nav-name">Eric Rysdyk</a>
+        <div class="nav-links">
+            <a href="../work.html">Work</a>
+            <a href="../resume.html">Resume</a>
+            <a href="mailto:eprysdyk@gmail.com">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <p class="breadcrumb"><a href="../work.html">← Back to Work</a></p>
+
+        <h1>Project 3 — Row Housing (Townhouse)</h1>
+        <p class="project-meta"><strong>Project Type:</strong> Row Housing / Townhouse (6-Unit)</p>
+        <p class="project-meta"><strong>My Role:</strong> Architectural Technologist (Junior)</p>
+        <p>Row housing drawings prepared for permitting and construction. These plans demonstrate a different housing typology with stacked units, integrated garages, and party wall assemblies across three levels.</p>
+
+        <div class="gallery">
+
+            <figure class="featured">
+                <img src="../images/03_floor_plans_three_levels.jpg" alt="Three floor plans on one sheet">
+                <figcaption>
+                    <strong>Three-Level Floor Plan Set</strong><br>
+                    Main, second, and third floor plans arranged strategically on a single sheet to reduce drawing count and streamline coordination.
+                </figcaption>
+            </figure>
+
+            <figure class="featured">
+                <img src="../images/03_cross_section.jpg" alt="Cross section">
+                <figcaption>
+                    <strong>Cross Section</strong><br>
+                    Full building section showing garage, suite layout, attic space, and roof line.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/03_second_floor_plan.jpg" alt="Second floor plan">
+                <figcaption>
+                    <strong>Second Floor Plan</strong><br>
+                    Overall second floor showing living areas, kitchens, bathrooms, and balconies.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="../images/03_main_floor_layout.jpg" alt="Main floor layout">
+                <figcaption>
+                    <strong>Main Floor Layout</strong><br>
+                    Main floor showing garages, entry vestibules, utility rooms, and den layouts.
+                </figcaption>
+            </figure>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eric Rysdyk</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.getElementById('lightbox-close');
+
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
