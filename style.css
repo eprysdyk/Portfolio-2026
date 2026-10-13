@@ -536,5 +536,27 @@ footer a:hover {
     color: #888;
     margin-top: 0.4rem;
     margin-bottom: 0;
+
+    /* Post-project reflection */
+.project-reflection {
+    margin-top: 4rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-reflection h2 {
+    font-size: 1.3rem;
+    color: #4db6ac;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.project-reflection p {
+    color: #b8b8b8;
+    font-size: 1rem;
+    line-height: 1.75;
+}
     line-height: 1.5;
 }
